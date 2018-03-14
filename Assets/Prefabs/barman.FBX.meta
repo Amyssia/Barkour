@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: b8ed40ee776a60144bb7457320367b15
-timeCreated: 1520435362
+guid: b215770edf8982d4290aafca729a1c9a
+timeCreated: 1521040757
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 'Material #2'
+    2100000: Standard_1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Pinte
+    4300000: landlord
     9500000: //RootNode
   externalObjects: {}
   materials:
