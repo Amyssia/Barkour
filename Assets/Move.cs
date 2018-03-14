@@ -6,7 +6,8 @@ using UnityEngine.Assertions;
 public class Move : MonoBehaviour
 {
     public float Speed = 10f;
-    public float SpeedSaut = 15f;
+    public float SpeedStrafe = 0.1f;
+    public float JumpForce = 2f;
 
     private Rigidbody _rigidbody;
 
@@ -20,22 +21,29 @@ public class Move : MonoBehaviour
     
     {
         Vector3 newPosition = transform.position + Speed * transform.forward * Time.deltaTime;
-        _rigidbody.MovePosition(newPosition);
+        
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            newPosition = transform.position + Speed * transform.right * Time.deltaTime;
-            _rigidbody.MovePosition(newPosition);
+            newPosition +=  SpeedStrafe * transform.right * Time.deltaTime;
+            
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            newPosition = transform.position - Speed * transform.right * Time.deltaTime;
-            _rigidbody.MovePosition(newPosition);
+            newPosition -=  SpeedStrafe * transform.right * Time.deltaTime;
+            
         }
+        
+        _rigidbody.MovePosition(newPosition);
+    }
+
+    private void FixedUpdate()
+    {
         if (Input.GetKey(KeyCode.Space))
         {
-            newPosition = transform.position + SpeedSaut * transform.up * Time.deltaTime;
-            _rigidbody.MovePosition(newPosition);
+            _rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+
+
         }
     }
 }
