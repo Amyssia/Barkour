@@ -46,4 +46,10 @@ public class Move : MonoBehaviour
 
         }
     }
+
+    public void ReverseInputs()
+    {
+        SpeedStrafe *= -1;
+    }
+
 }
