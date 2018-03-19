@@ -42,8 +42,6 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             _rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-
-
         }
     }
 
