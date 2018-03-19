@@ -25,6 +25,7 @@ public class Move : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            Debug.Log("fleche droite");
             newPosition +=  SpeedStrafe * transform.right * Time.deltaTime;
             
         }
@@ -41,13 +42,16 @@ public class Move : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            
             _rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
     }
 
     public void ReverseInputs()
     {
+        
         SpeedStrafe *= -1;
+        Debug.Log("c'est inversé");
     }
 
 }
