@@ -8,6 +8,8 @@ public class Move : MonoBehaviour
     public float Speed = 10f;
     public float SpeedStrafe = 0.1f;
     public float JumpForce = 2f;
+    private float LifeBeer = 100f;
+    public GameObject BeerPlayer;
 
     private Rigidbody _rigidbody;
 
@@ -25,7 +27,7 @@ public class Move : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            Debug.Log("fleche droite");
+            
             newPosition +=  SpeedStrafe * transform.right * Time.deltaTime;
             
         }
@@ -51,7 +53,41 @@ public class Move : MonoBehaviour
     {
         
         SpeedStrafe *= -1;
-        Debug.Log("c'est inversé");
+        
     }
+
+    void CollisionEffect()
+    {
+        LifeBeer -= 49f;
+
+        if(LifeBeer <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+
+        if (LifeBeer == 51)
+        {
+            Debug.Log("first collision");
+            gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+        }
+
+        if (LifeBeer == 2)
+
+        {
+            gameObject.GetComponent<Renderer>().material.color = Color.red;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Obstacle"))
+        {
+            CollisionEffect();
+
+       
+        }
+    }
+
+    
 
 }
