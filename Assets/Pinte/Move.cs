@@ -7,9 +7,10 @@ public class Move : MonoBehaviour
 {
     public float Speed = 10f;
     public float SpeedStrafe = 0.1f;
-    public float JumpForce = 2f;
+    public float JumpForce = 5f;
     private float LifeBeer = 100f;
     public GameObject BeerPlayer;
+    public bool isGrounded;
 
     private Rigidbody _rigidbody;
 
@@ -40,14 +41,26 @@ public class Move : MonoBehaviour
         _rigidbody.MovePosition(newPosition);
     }
 
+    public void OnCollisionStay(Collision collision)
+    {
+        isGrounded = true;
+    }
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isGrounded)
         {
             
             _rigidbody.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
+
+    public void SpeedEffect()
+    {
+        Speed *= 2;
+        SpeedStrafe *= 2;
+    }
+
 
     public void ReverseInputs()
     {

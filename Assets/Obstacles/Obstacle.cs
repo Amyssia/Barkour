@@ -20,8 +20,8 @@ public class Obstacle : MonoBehaviour {
     {
         if(other.CompareTag("Player"))
         {
-            GameManager.s_Singleton.AjouteNb();
-            //Destroy(gameObject);
+           // GameManager.s_Singleton.AjouteNb();
+            Destroy(gameObject);
         }
     }
 }

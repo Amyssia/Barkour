@@ -11,9 +11,17 @@ public class Ghb_effect : MonoBehaviour {
         {
 
             player.ReverseInputs();
-            Debug.Log("It works!");
+            Debug.Log("Touches inversées");
+        }
+
+        if (other.CompareTag("Player"))
+        {
+           
+            Destroy(gameObject);
         }
 
 
     }
+
+
 }
