@@ -5,22 +5,12 @@ using UnityEngine;
 public class Ghb_effect : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) { 
-    Move player = other.gameObject.GetComponent<Move>();
-    
-        if (player != null)
-        {
-
-            player.ReverseInputs();
-            Debug.Log("Touches inversées");
-        }
-
         if (other.CompareTag("Player"))
-        {
-           
+        { 
+            other.gameObject.GetComponent<Move>().ReverseInputs();
+            Debug.Log("Touches inversées");
             Destroy(gameObject);
         }
-
-
     }
 
 

@@ -7,22 +7,12 @@ public class Coc_effect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Move player = other.gameObject.GetComponent<Move>();
-
-        if (player != null)
-        {
-
-            player.SpeedEffect();
-            Debug.Log("Grosse vitesse");
-        }
-
         if (other.CompareTag("Player"))
         {
-
+            other.gameObject.GetComponent<Move>().SpeedEffect();
+            Debug.Log("Rapideeeee !!!");
             Destroy(gameObject);
         }
-
-
     }
 
 }

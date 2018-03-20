@@ -59,6 +59,14 @@ public class Move : MonoBehaviour
     {
         Speed *= 2;
         SpeedStrafe *= 2;
+        StartCoroutine("SpeedCooldown");
+    }
+
+    IEnumerator SpeedCooldown()
+    {
+        yield return new WaitForSeconds(3);
+        Speed /= 2;
+        SpeedStrafe /= 2;
     }
 
 
@@ -66,7 +74,13 @@ public class Move : MonoBehaviour
     {
         
         SpeedStrafe *= -1;
-        
+        StartCoroutine("ReverseCooldown");
+    }
+
+    IEnumerator ReverseCooldown()
+    {
+        yield return new WaitForSeconds(5f);
+        SpeedStrafe *= -1;
     }
 
     void CollisionEffect()
@@ -99,8 +113,14 @@ public class Move : MonoBehaviour
 
        
         }
+
+     
     }
 
-    
+  /*  private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
+    */
 }

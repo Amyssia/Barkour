@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager s_Singleton;
 
+ 
+
+
     private void Awake()
     {
         if (s_Singleton != null)
@@ -20,15 +23,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+   
 
     public void AjouteNb ()
     {
