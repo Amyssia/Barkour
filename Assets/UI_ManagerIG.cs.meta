@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 9554290bb9565244bbd512d7b3ccac3a
-timeCreated: 1521453522
+guid: 62725c9d625bf294bbd0adca4b7eeaba
+timeCreated: 1521626709
 licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - pinte: {fileID: 4357332416581032, guid: 41a6a1d1f496f8047be3229a7d38709e, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -12,12 +12,18 @@ public class Move : MonoBehaviour
     public GameObject BeerPlayer;
     public bool isGrounded;
 
+    public float Unknow;
+
     private Rigidbody _rigidbody;
 
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         Assert.IsNotNull(_rigidbody);
+
+        Unknow = transform.position.z;
+        UI_ManagerIG.s_Singleton.DisplayDistance(transform.position.z + (-Unknow));
+
     }
 
     void Update()
@@ -39,6 +45,8 @@ public class Move : MonoBehaviour
         }
         
         _rigidbody.MovePosition(newPosition);
+
+        UI_ManagerIG.s_Singleton.DisplayDistance(transform.position.z + (-Unknow));
     }
 
     public void OnCollisionStay(Collision collision)

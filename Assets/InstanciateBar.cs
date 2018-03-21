@@ -13,6 +13,7 @@ public class InstanciateBar : MonoBehaviour
 
         {
             GameManager.s_Singleton.DeclencheBar();
+
             Debug.Log("Instantiate");
         }
     }
