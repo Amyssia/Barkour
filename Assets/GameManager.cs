@@ -8,7 +8,18 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager s_Singleton;
 
- 
+    public GameObject ObjectToSpawn;
+
+    private GameObject ObjectToDestroy;
+
+    public GameObject FirstBar;
+
+
+    private GameObject newBar;
+    private float newPosition = 0f;
+
+
+
 
 
     private void Awake()
@@ -23,12 +34,36 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-   
+
+    public void Start()
+    {
+        
+    }
+
 
     public void AjouteNb ()
     {
         nb++;
         Debug.Log(nb);
+    }
+
+    public void DeclencheBar()
+    {
+        if(ObjectToDestroy == null )
+        {
+            ObjectToDestroy = FirstBar;
+            newBar = Instantiate(ObjectToSpawn, new Vector3(0, 0, newPosition + 20f), transform.rotation);
+            newPosition = newBar.transform.position.z;
+            return;
+        }
+        Destroy(ObjectToDestroy);
+        ObjectToDestroy = newBar;
+        newBar = Instantiate(ObjectToSpawn, new Vector3(0, 0, newPosition + 20f), transform.rotation);
+        newPosition = newBar.transform.position.z;
+        
+
+
+        Debug.Log("Bar apparait");
     }
 
 }
