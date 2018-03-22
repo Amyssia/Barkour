@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus.unity
     guid: 013d65f57af999c44869a67fecd3fd0c
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Unity.unity
-    guid: b525a1f196486ee408fa3d851f8faafe
+    path: Assets/Scenes/Real_Barkour.unity
+    guid: fa9fa1f9782b8f64e8fff1e65d611b98

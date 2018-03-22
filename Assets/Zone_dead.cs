@@ -23,12 +23,13 @@ public class Zone_dead : MonoBehaviour {
         transform.position = tmpPos;
 	}
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             Debug.Log("It's over");
             Time.timeScale = 0;
+            
         }
     }
 }

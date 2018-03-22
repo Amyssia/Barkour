@@ -745,7 +745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb4c5068d82028b4fab2344b1469c766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayScene: Unity
+  LastTimeScale: 0
+  PausePanel: {fileID: 0}
+  PlayScene: Real_Barkour
 --- !u!114 &1943893994
 MonoBehaviour:
   m_ObjectHideFlags: 0

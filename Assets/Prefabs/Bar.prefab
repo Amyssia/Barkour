@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54136350773384028}
   - component: {fileID: 65505908666922192}
   - component: {fileID: 114414061536116088}
+  - component: {fileID: 114976020687425222}
   m_Layer: 0
   m_Name: Trickition
   m_TagString: Triggision
@@ -222,5 +223,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ad4fec0322c54b40b64b7434689e563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114976020687425222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484556295718870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0391cf23294a2245a8ca28363071df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

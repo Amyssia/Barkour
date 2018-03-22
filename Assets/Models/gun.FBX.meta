@@ -1,17 +1,16 @@
 fileFormatVersion: 2
-guid: 7a3ac7dd97335e84bb6d97a50e685719
-timeCreated: 1521559368
+guid: 0f8af4335a93aac47a21d3452fa70591
+timeCreated: 1521646187
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: 01 - Default
-    2100002: 02 - Default
+    2100000: default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: tabouret
+    4300000: cylinder01.cylinder01
     9500000: //RootNode
   externalObjects: {}
   materials:
