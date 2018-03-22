@@ -14,10 +14,18 @@ public class UI_Manager : MonoBehaviour
     public Move hero;
 
     public GameObject go;
+    public GameObject Instructions;
+
+
+    public Animator Anim;
+    
+    
+
 
     // Use this for initialization
     void Start()
     {
+        Anim.speed = 0;
         PausePanel.SetActive(false);
         EndPanel.SetActive(false);
     }
@@ -26,12 +34,16 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        LireTuto();
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
             
         }
-        
+
+      
     }
 
     public void OnClickResume()
@@ -90,7 +102,20 @@ public class UI_Manager : MonoBehaviour
 
     }
 
-    public void LancerJeu()
+    public void LireTuto()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+          
+            Instructions.SetActive(false);
+            Anim.speed = 1;
+            go.SetActive(true);
+        }
+    }
+    
+
+   public void LancerJeu()
     {
 
         hero.DepartBiere();
@@ -98,6 +123,7 @@ public class UI_Manager : MonoBehaviour
         
     }
 
+ 
 
 
 }

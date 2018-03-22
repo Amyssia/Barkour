@@ -1298,6 +1298,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d34ba135d4374474188c6038064755bf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &557056713 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1642740994549884, guid: 5fd3ed41ed014674fafed4288b67c528,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809752976}
 --- !u!1001 &601120416
 Prefab:
   m_ObjectHideFlags: 0
@@ -2306,6 +2311,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea16cabb8a41aa94aac4abbd077ac309, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1301341308 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1441996266705186, guid: 5fd3ed41ed014674fafed4288b67c528,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809752976}
 --- !u!1001 &1343489411
 Prefab:
   m_ObjectHideFlags: 0
@@ -2582,7 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pinte: {fileID: 536330889}
-  UI_Manager: {fileID: 0}
+  UI_Manager: {fileID: 1976357006}
 --- !u!65 &1489673205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3392,14 +3402,46 @@ Prefab:
       propertyPath: hero
       value: 
       objectReference: {fileID: 1962561984}
+    - target: {fileID: 224444374227476372, guid: 5fd3ed41ed014674fafed4288b67c528,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 114458357965106154, guid: 5fd3ed41ed014674fafed4288b67c528,
+        type: 2}
+      propertyPath: Instructions
+      value: 
+      objectReference: {fileID: 1301341308}
+    - target: {fileID: 1642740994549884, guid: 5fd3ed41ed014674fafed4288b67c528, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114458357965106154, guid: 5fd3ed41ed014674fafed4288b67c528,
+        type: 2}
+      propertyPath: Rebours
+      value: 
+      objectReference: {fileID: 557056713}
+    - target: {fileID: 114458357965106154, guid: 5fd3ed41ed014674fafed4288b67c528,
+        type: 2}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 1976357007}
+    - target: {fileID: 1746328215757588, guid: 5fd3ed41ed014674fafed4288b67c528, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1165651510216326, guid: 5fd3ed41ed014674fafed4288b67c528, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114458357965106154, guid: 5fd3ed41ed014674fafed4288b67c528,
+        type: 2}
+      propertyPath: PlayScene
+      value: Real_Barkour 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1294707534867818, guid: 5fd3ed41ed014674fafed4288b67c528, type: 2}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224780390783956074, guid: 5fd3ed41ed014674fafed4288b67c528,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000038146973
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fd3ed41ed014674fafed4288b67c528, type: 2}
@@ -3763,6 +3805,11 @@ Prefab:
 --- !u!1 &1976357006 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1953615420266764, guid: 5fd3ed41ed014674fafed4288b67c528,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809752976}
+--- !u!95 &1976357007 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95939787243497372, guid: 5fd3ed41ed014674fafed4288b67c528,
     type: 2}
   m_PrefabInternal: {fileID: 1809752976}
 --- !u!1001 &1978002032
