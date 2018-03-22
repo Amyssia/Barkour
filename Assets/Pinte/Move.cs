@@ -47,11 +47,18 @@ public class Move : MonoBehaviour
         _rigidbody.MovePosition(newPosition);
 
         UI_ManagerIG.s_Singleton.DisplayDistance(transform.position.z + (-Unknow));
+
+     
     }
 
     public void OnCollisionStay(Collision collision)
     {
         isGrounded = true;
+    }
+
+    public void DepartBiere()
+    {
+        Speed = 2f;
     }
     private void FixedUpdate()
     {

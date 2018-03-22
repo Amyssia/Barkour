@@ -11,6 +11,10 @@ public class UI_Manager : MonoBehaviour
     public string PlayScene;
     public string MenusScene;
 
+    public Move hero;
+
+    public GameObject go;
+
     // Use this for initialization
     void Start()
     {
@@ -84,6 +88,14 @@ public class UI_Manager : MonoBehaviour
             EndPanel.SetActive(true);
         }
 
+    }
+
+    public void LancerJeu()
+    {
+
+        hero.DepartBiere();
+        go.SetActive(false);
+        
     }
 
 
