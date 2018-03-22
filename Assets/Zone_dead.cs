@@ -6,6 +6,8 @@ public class Zone_dead : MonoBehaviour {
 
     public Transform pinte;
 
+    public GameObject UI_Manager;
+
     private Vector3 tmpPos;
 
     // Use this for initialization
@@ -29,7 +31,7 @@ public class Zone_dead : MonoBehaviour {
         {
             Debug.Log("It's over");
             Time.timeScale = 0;
-            
+            UI_Manager.GetComponent<UI_Manager>().ToggleEnd();
         }
     }
 }
