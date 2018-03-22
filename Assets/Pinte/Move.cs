@@ -13,6 +13,7 @@ public class Move : MonoBehaviour
     public bool isGrounded;
 
     public float Unknow;
+    public GameObject UI_Manager;
 
     private Rigidbody _rigidbody;
 
@@ -98,6 +99,7 @@ public class Move : MonoBehaviour
         if(LifeBeer <= 0)
         {
             gameObject.SetActive(false);
+            UI_Manager.GetComponent<UI_Manager>().ToggleEnd();
         }
 
         if (LifeBeer == 51)
