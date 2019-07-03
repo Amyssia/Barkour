@@ -7,12 +7,14 @@ public class Player : MonoBehaviour
 {
     // Variables
 
+    AudioSource audioSRC_Player;
+    public AudioClip hitSFX;
+
     public float Speed = 10f;
     public float SpeedStrafe = 0.1f;
     public float JumpForce = 5f;
-    private float LifeBeer = 100f;
+    private float LifeBeer = 3f;
     public GameObject BeerPlayer;
-    public bool isGrounded;
 
     public float Unknow;
     public GameObject UI_Manager;
@@ -87,7 +89,7 @@ public class Player : MonoBehaviour
 
     void CollisionEffect()
     {
-        LifeBeer -= 49f;
+        LifeBeer -= 1f;
 
         if(LifeBeer <= 0)
         {
@@ -95,13 +97,12 @@ public class Player : MonoBehaviour
             UI_Manager.GetComponent<UI_Manager>().ToggleEnd();
         }
 
-        if (LifeBeer == 51)
+        if (LifeBeer == 2)
         {
-            Debug.Log("first collision");
             gameObject.GetComponent<Renderer>().material.color = Color.yellow;
         }
 
-        if (LifeBeer == 2)
+        if (LifeBeer == 1)
 
         {
             gameObject.GetComponent<Renderer>().material.color = Color.red;
@@ -113,6 +114,8 @@ public class Player : MonoBehaviour
         if(other.CompareTag("Obstacle"))
         {
             CollisionEffect();
+            audioSRC_Player.clip = hitSFX;
+            audioSRC_Player.Play();
         }
     }
 }

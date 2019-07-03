@@ -5,9 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Variables
-
-    private int nb = 0;
-
+    
     public static GameManager s_Singleton;
 
     public GameObject[] barSelection;
@@ -40,13 +38,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Functions
-
-    public void AjouteNb ()
-    {
-        nb++;
-        Debug.Log(nb);
-    }
-
+    
     public void SpawnBar()
     {
         indexBarSelection = Random.Range(0, barSelection.Length);

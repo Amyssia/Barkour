@@ -11,6 +11,7 @@ public class UI_Manager : MonoBehaviour
 
     public AudioClip hoverSFX;
     public AudioClip clickSFX;
+    public AudioClip beerLaunchSFX;
 
     public float lastTimeScale;
     public GameObject pausePanel;
@@ -121,6 +122,8 @@ public class UI_Manager : MonoBehaviour
     
    public void LaunchGame()
     {
+        audioSRC.clip = beerLaunchSFX;
+        audioSRC.Play();
         animON = false;
         hero.canMove = true;
         hero.DepartBiere();
