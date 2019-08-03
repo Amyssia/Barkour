@@ -28,13 +28,9 @@ public class UI_ManagerIG : MonoBehaviour
 	
     // Functions
 
-    public void DisplayDistance(float Score) // Show Distance IG
+    public void DisplayDistance(float Score) // Show Distance
     {
         distanceText.text = "Score: " + Score.ToString("F2");
-    }
-
-    public void DisplayEndDistance(float Score) // Show End Distance
-    {
         endDistanceText.text = Score.ToString("F2");
     }
 }

@@ -126,7 +126,7 @@ public class UI_Manager : MonoBehaviour
         audioSRC.Play();
         animON = false;
         hero.canMove = true;
-        hero.DepartBiere();
+        hero.LaunchBeer();
         go.SetActive(false);
     }
 }

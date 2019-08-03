@@ -316,7 +316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88f501967b87734e9f1051e7b01f3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitSFX: {fileID: 0}
+  hitSFX: {fileID: 8300000, guid: 0894ed65bd5d7504992138045cb8504d, type: 3}
+  hitKillSFX: {fileID: 8300000, guid: eba74e9d6297b7b449d7cc24491512e1, type: 3}
+  speedSFX: {fileID: 8300000, guid: efa206e20a32c7246b41b8904d4dd642, type: 3}
+  ghbSFX: {fileID: 8300000, guid: eeb9e184213ddca449cdcbc8cafe17ee, type: 3}
   Speed: 0
   SpeedStrafe: 0.6
   JumpForce: 200
